@@ -2,9 +2,13 @@
 
 namespace Database\Seeders;
 
+
 use App\Models\Bookshop;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+
+
+use Illuminate\Support\Facades\DB;
 
 class BookshopSeeder extends Seeder
 {
@@ -13,6 +17,8 @@ class BookshopSeeder extends Seeder
      */
     public function run(): void
     {
+        DB::table('bookshops')->truncate();
+
         $bookshops = [
             'Prague' => [
                 'Knihy Dobrovský',
@@ -58,5 +64,7 @@ class BookshopSeeder extends Seeder
             }
 
         }
+
+
     }
 }
