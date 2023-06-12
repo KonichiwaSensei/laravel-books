@@ -38,8 +38,8 @@ return new class extends Migration
             $table->dropUnique('publishers_slug_unique');
         });
 
-        Schema::table('books', function (Blueprint $table) {
-            $table->dropUnique('publishers_slug_unique');
+        Schema::table('categories', function (Blueprint $table) {
+            $table->dropUnique('categories_slug_unique');
         });
     }
 };
