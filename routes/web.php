@@ -21,3 +21,7 @@ Route::get('/', function () {
 Route::get('/books/latest', function () {
     return view('books.latest');
 });
+
+Route::get('/index', function () {
+    return view('index.index');
+});
