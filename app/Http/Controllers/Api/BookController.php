@@ -28,8 +28,17 @@ class BookController extends Controller
 
     public function latest()
     {
-        $latestBooks = Book::orderBy('publication_date', 'desc')->limit(10)->get();
+        $latestBooks = Book::orderBy('publication_date', 'desc')->with('authors')->limit(10)->get();
         
         return $latestBooks;
     }
+
+    public function index()
+    {
+        $books = Book::with('authors')->latest()->limit(1)->get();;
+        
+        return view('index.index', compact('books'));
+    }
+
+    
 }

@@ -1,6 +1,10 @@
 @extends('layouts/main')
 
 @section('content')
-    <h1>{{$book->title}}</h1>
-    <p>We are the best online bookstore ever... etc.</p>
+@foreach ($books as $book)
+<h1>{{$book->title}}</h1>
+<p>Published at: {{$book->publication_date}}</p>
+<p>
+@endforeach
+
 @endsection
