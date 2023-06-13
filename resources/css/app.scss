@@ -1,4 +1,31 @@
+body {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+
+    background-color: rgba(238, 232, 170, 0.696);
+}
+
 h1 {
-    color: red;
+    color: purple;
+    text-decoration: underline;
+}
+
+button {
+    background-color: palegoldenrod;
+    color: purple;
+}
+
+.container{
+    text-align: center;
+}
+
+ul {
+    display: inline-block;
+    text-align: left;
+}
+
+li {
+    list-style: none;
     text-decoration: underline;
 }
