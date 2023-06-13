@@ -4,7 +4,7 @@ const loadData = async () => {
     const response = await fetch(url);
     const parsedData = await response.json();
 
-    
+
 
     parsedData.forEach(data => {
 
@@ -34,7 +34,7 @@ const loadData = async () => {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    
+
     const button = document.getElementById('load-books');
 
     button.addEventListener('click', loadData);
